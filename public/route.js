@@ -6,15 +6,15 @@ $(document).ready(function() {
   });
   console.log("tjhtujy");
   function postData() {
-    let data = {
-      first_name: $("#firstname").val(),
-      last_name: $("#lastname").val()
+    var data = {
+      firstname: $("#firstname").val(),
+      lastname: $("#lastname").val()
     };
     console.log("data", data);
     $.ajax({
       type: "POST",
       contentType: "application/json",
-      url: window.location + "/api/customers/save",
+      url: window.location + "api/customers/save",
       data: JSON.stringify(data),
       dataType: "json",
       success: function(customer) {
