@@ -1,8 +1,11 @@
 $(document).ready(function() {
   $("#next").click(function() {
-    console.log("nnn");
     $("#first").addClass("hide");
     $(".container").removeClass("hide");
+  });
+  $("#submit").click(function() {
+    $(".container").addClass("hide");
+    $("#third").removeClass("hide");
   });
   $("#customerForm").submit(function(e) {
     e.preventDefault();
