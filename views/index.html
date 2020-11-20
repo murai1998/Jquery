@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,11 +13,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
     <script src='/route.js'></script>
+
 </head>
 
 <body>
-    <div class="container">
+    <div id='first'>
+        <h1>Customers form</h1>
+        <button id='next'>Next</button>
+    </div>
+    <div class="container hide">
         <div class="col-sm-4">
 
             <div>
@@ -39,12 +46,13 @@
                 <button id="allCustomers" type="button" class="btn btn-primary">Customers</button>
                 <div id="getResultDiv">
                     <ul class="list-group">
-                        <li>jjj</li>
+
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

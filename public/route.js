@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  $("#next").click(function() {
+    console.log("nnn");
+    $("#first").addClass("hide");
+    $(".container").removeClass("hide");
+  });
   $("#customerForm").submit(function(e) {
     e.preventDefault();
     console.log("text");
@@ -18,13 +23,7 @@ $(document).ready(function() {
       data: JSON.stringify(data),
       dataType: "json",
       success: function(customer) {
-        $("#postResultDiv").html(
-          "<p>" +
-            "Post Successfully! <br>" +
-            "--->" +
-            JSON.stringify(customer) +
-            "</p>"
-        );
+        $("#postResultDiv").html("<p>" + "Post Successfully! <br>" + "</p>");
       },
       error: function(e) {
         alert("Error!");
