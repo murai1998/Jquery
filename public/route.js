@@ -34,7 +34,7 @@ $(document).ready(function() {
         $("#postResultDiv").html("<p>" + "Post Successfully! <br>" + "</p>");
       },
       error: function(e) {
-        alert("Error!");
+        alert("e");
         console.log("ERROR: ", e);
       }
     });
