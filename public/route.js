@@ -83,6 +83,7 @@ $(document).ready(function() {
       $(this)
         .parent()
         .addClass("hide");
+      $("#level").addClass("hide");
     });
   }
   console.log("but", but);
