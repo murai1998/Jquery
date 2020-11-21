@@ -30,7 +30,7 @@ router.use(function(req, res, next) {
 });
 
 app.get("/", function(req, res) {
-  res.sendFile("<h1>Hello World!</h1>");
+  res.sendFile(path + "index.html");
 });
 
 app.post("/api/customers/save", function(req, res) {
