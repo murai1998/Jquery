@@ -36,10 +36,15 @@ app.get("/", function(req, res) {
 app.post("/api/customers/save", function(req, res) {
   const firstname = req.body.firstname;
   const lastname = req.body.lastname;
-
+  const date = Date.parse(req.body.date);
+  const review = req.body.review;
+  mark = req.body.mark;
   const newSurvey = new Survey({
     firstname,
-    lastname
+    lastname,
+    date,
+    review,
+    mark
   });
   console.log("name", newSurvey);
   newSurvey

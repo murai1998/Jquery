@@ -27,6 +27,20 @@
         <div class="col-sm-4">
 
             <div>
+                <label for="lastname"> How do you satisfy with you purchase? <br>From 1 to 10</label>
+
+                <div>
+                    <button id='mark1'>1</button>
+                    <button id='mark2'>2</button>
+                    <button id='mark3'>3</button>
+                    <button id='mark4'>4</button>
+                    <button id='mark5'>5</button>
+                    <button id='mark6'>6</button>
+                    <button id='mark7'>7</button>
+                    <button id='mark8'>8</button>
+                    <button id='mark9'>9</button>
+                    <button id='mark10'>10</button>
+                </div>
                 <form id="customerForm">
                     <div class="form-group">
                         <label for="firstname">First Name:</label>
@@ -34,8 +48,17 @@
                     </div>
                     <div class="form-group">
                         <label for="lastname">Last Name:</label>
-                        <input type="text" class="form-control" id="lastname" placeholder="Enter LastName" />
+                        <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name" />
                     </div>
+                    <div class="form-group">
+                        <label for="lastname">Review</label>
+                        <textarea class="form-control" id="area" rows="4" cols="50">
+ I have recently made a purchase at...
+  </textarea>
+                    </div>
+
+
+                    <br>
                     <button id='submit' type="submit" class="btn btn-default">Submit</button>
                 </form>
             </div>

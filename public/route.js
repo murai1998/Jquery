@@ -1,3 +1,4 @@
+var but = 0;
 $(document).ready(function() {
   $("#next").click(function() {
     $("#first").addClass("hide");
@@ -13,10 +14,14 @@ $(document).ready(function() {
     postData();
   });
   console.log("tjhtujy");
+
   function postData() {
     var data = {
       firstname: $("#firstname").val(),
-      lastname: $("#lastname").val()
+      lastname: $("#lastname").val(),
+      date: new Date(0),
+      review: $("#area").val(),
+      mark: but
     };
     console.log("data", data);
     $.ajax({
@@ -63,7 +68,23 @@ $(document).ready(function() {
     });
   }
 
+  //   $("#mark1").click(function() {
+  //     let but = $(this).text();
+  //     console.log("button", but);
+  //   });
   function resetForm() {
     $("#firstname").val(""), $("#lastname").val("");
   }
+
+  for (let i = 1; i <= 10; i++) {
+    $(`#mark${i}`).click(function() {
+      but = Number($(this).text());
+      console.log("but", but);
+      $(this)
+        .parent()
+        .addClass("hide");
+    });
+  }
+  console.log("but", but);
+  console.log("but", but);
 });
