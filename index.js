@@ -60,6 +60,6 @@ app.get("/api/customers/all", function(req, res) {
 
 app.use("/", router);
 
-app.listen(3001, function() {
+app.listen(PORT, function() {
   console.log(`Example app listening on port ${PORT}`);
 });
