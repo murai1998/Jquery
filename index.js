@@ -6,7 +6,7 @@ const router = express.Router();
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(cors());
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 require("dotenv").config();
 
 let Survey = require("./model/name.js");
@@ -60,6 +60,6 @@ app.get("/api/customers/all", function(req, res) {
 
 app.use("/", router);
 
-app.listen(3001, function() {
+app.listen(PORT, function() {
   console.log(`Example app listening on port ${PORT}`);
 });
