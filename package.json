@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "logger": "^0.0.1",
+    "mongoose": "^5.10.15"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
@@ -16,13 +25,5 @@
   "bugs": {
     "url": "https://github.com/murai1998/Jquery/issues"
   },
-  "homepage": "https://github.com/murai1998/Jquery#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "logger": "0.0.1",
-    "mongoose": "^5.10.15"
-  }
+  "homepage": "https://github.com/murai1998/Jquery#readme"
 }
