@@ -1,4 +1,6 @@
 var but = 0;
+var rating = 0;
+var length = 0;
 $(document).ready(function() {
   $("#next").click(function() {
     $("#first").addClass("hide");
@@ -55,10 +57,12 @@ $(document).ready(function() {
         $("#getResultDiv ul").empty();
         var custList = "";
         $.each(result, function(i, customer) {
-          $("#getResultDiv .list-group").append(
-            customer.firstname + " " + customer.lastname + "<br>"
-          );
+          $("#getResultDiv .list-group").append(customer.review + "<br>");
+          if (customer.mark) rating += Number(customer.mark);
+          length = i + 1;
         });
+        console.log("length", length);
+        console.log("Rating", Math.floor(rating / length).toFixed(1));
         console.log("Success: ", result);
       },
       error: function(e) {
