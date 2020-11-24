@@ -53,9 +53,11 @@ app.post("/api/customers/save", function(req, res) {
     .catch(err => res.status(400).json("Error: " + err));
 });
 
-app.get("/api/customers/all", function(req, res) {
-  console.log("Get All Customers");
-  return res.send(customers);
+app.get("/api/reviews", function(req, res) {
+  Survey.find()
+    .then(survey => res.json(survey))
+    .catch(err => res.status(400).json("Error" + err));
+  //   return res.send(customers);
 });
 
 app.use("/", router);
@@ -63,3 +65,4 @@ app.use("/", router);
 app.listen(PORT, function() {
   console.log(`Example app listening on port ${PORT}`);
 });
+// https://apppppk.herokuapp.com/

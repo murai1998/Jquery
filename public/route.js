@@ -50,7 +50,7 @@ $(document).ready(function() {
   function ajaxGet() {
     $.ajax({
       type: "GET",
-      url: window.location + "api/customers/all",
+      url: window.location + "api/reviews",
       success: function(result) {
         $("#getResultDiv ul").empty();
         var custList = "";
